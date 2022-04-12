@@ -5,7 +5,7 @@
   "main": "dist/bnhhsh.js",
   "scripts": {
     "build": "tsup-node lib/bnhhsh.ts --dts",
-    "test": "esno lib/bnhhsh.spec.ts"
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,11 @@
   },
   "homepage": "https://github.com/ryanmoyo/bnhhsh#readme",
   "devDependencies": {
+    "@types/node": "^17.0.23",
     "esno": "^0.14.1",
     "pinyin": "^3.0.0-alpha.4",
     "tsup": "^5.12.4",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.3",
+    "vitest": "^0.9.3"
   }
 }
