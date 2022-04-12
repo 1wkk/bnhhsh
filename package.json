@@ -23,10 +23,12 @@
     "url": "https://github.com/ryanmoyo/bnhhsh/issues"
   },
   "homepage": "https://github.com/ryanmoyo/bnhhsh#readme",
+  "dependencies": {
+    "pinyin": "^3.0.0-alpha.4"
+  },
   "devDependencies": {
     "@types/node": "^17.0.23",
     "esno": "^0.14.1",
-    "pinyin": "^3.0.0-alpha.4",
     "tsup": "^5.12.4",
     "typescript": "^4.6.3",
     "vitest": "^0.9.3"
