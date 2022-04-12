@@ -4,6 +4,10 @@ import 色情词库_数据增强 from './data/色情词库_数据增强.json'
 import 莉沫词库 from './data/莉沫词库.json'
 import 常用汉字 from './data/常用汉字.json'
 import 现代汉语常用词表 from './data/现代汉语常用词表.json'
+import fs from 'fs'
+import path from 'path'
+
+const pt = path.resolve(__dirname, 'bnhhsh.json')
 
 const setdefault = (dic, k, v) => {
   if (dic[k] === undefined) dic[k] = v
@@ -47,11 +51,15 @@ const 破处 = () => {
 
   const n = max(词桶)
   for (let i = 1; i <= n; i++) setdefault(词桶, i, {})
-  return { n, 词桶 }
+
+  fs.writeFileSync(pt, JSON.stringify(词桶))
 }
 
+if (!fs.existsSync(pt)) 破处()
+const 词桶 = JSON.parse(fs.readFileSync(pt, { encoding: 'utf-8' }))
+const n = max(词桶)
+
 const yndp = (target: string | string[]) => {
-  const { n, 词桶 } = 破处()
   const 代价 = { '-1': 0 }
   const 记录 = { '-1': [] }
   for (let x = 0; x < target.length; x++) {
@@ -59,7 +67,7 @@ const yndp = (target: string | string[]) => {
     for (let k = n; k > 0; k--) {
       const s = x - k + 1
       if (s < 0) continue
-      const c = 词桶[k][target.slice(s, x + 1)]
+      const c = 词桶[k][target.slice(s, x + 1) as string]
       if (c) {
         const [词, 痛苦] = c
         if (代价[x - k] + 痛苦 < 代价[x]) {
