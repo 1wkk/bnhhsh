@@ -1,8 +1,11 @@
 {
   "name": "bnhhsh",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "bnhhsh",
   "main": "dist/bnhhsh.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup-node lib/bnhhsh.ts --dts",
     "test": "vitest run"
