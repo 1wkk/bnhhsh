@@ -1,0 +1,29 @@
+{
+  "name": "bnhhsh",
+  "version": "0.0.1",
+  "description": "bnhhsh",
+  "main": "lib/bnhhsh.js",
+  "scripts": {
+    "build": "tsup-node lib/bnhhsh.ts --dts",
+    "test": "esno lib/bnhhsh.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanmoyo/bnhhsh.git"
+  },
+  "keywords": [
+    "bnhhsh"
+  ],
+  "author": "RimoChan<the@librian.net>",
+  "license": "强制子作许可证",
+  "bugs": {
+    "url": "https://github.com/ryanmoyo/bnhhsh/issues"
+  },
+  "homepage": "https://github.com/ryanmoyo/bnhhsh#readme",
+  "devDependencies": {
+    "esno": "^0.14.1",
+    "pinyin": "^3.0.0-alpha.4",
+    "tsup": "^5.12.4",
+    "typescript": "^4.6.3"
+  }
+}
