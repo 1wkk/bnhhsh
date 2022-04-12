@@ -2,7 +2,7 @@
   "name": "bnhhsh",
   "version": "0.0.1",
   "description": "bnhhsh",
-  "main": "lib/bnhhsh.js",
+  "main": "dist/bnhhsh.js",
   "scripts": {
     "build": "tsup-node lib/bnhhsh.ts --dts",
     "test": "esno lib/bnhhsh.spec.ts"
